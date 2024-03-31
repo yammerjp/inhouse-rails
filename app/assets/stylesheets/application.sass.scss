@@ -1,5 +1,9 @@
 @use '@pepabo-inhouse/components-web' as inhouse;
 
+html {
+  background: white;
+}
+
 .button-submit {
   @include inhouse.button-style(
     $options: (

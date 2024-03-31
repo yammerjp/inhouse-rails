@@ -2,7 +2,8 @@
   "name": "app",
   "private": "true",
   "dependencies": {
-    "@pepabo-inhouse/components-web": "^1.0.0",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.4",
     "@pepabo-inhouse/adapter": "^1.0.0",
     "@pepabo-inhouse/app-bar": "^1.0.0",
     "@pepabo-inhouse/avatar": "^1.0.0",
@@ -10,6 +11,7 @@
     "@pepabo-inhouse/button": "^1.0.0",
     "@pepabo-inhouse/cell": "^1.0.0",
     "@pepabo-inhouse/checkbox": "^1.0.0",
+    "@pepabo-inhouse/components-web": "^1.0.0",
     "@pepabo-inhouse/constants": "^1.0.0",
     "@pepabo-inhouse/container": "^1.0.0",
     "@pepabo-inhouse/description-list": "^1.0.0",
@@ -31,9 +33,11 @@
     "@pepabo-inhouse/textfield": "^1.0.0",
     "@pepabo-inhouse/thumbnail": "^1.0.0",
     "@pepabo-inhouse/tokens": "^0.14.0",
+    "esbuild": "^0.20.2",
     "sass": "^1.72.0"
   },
   "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
   }
 }
