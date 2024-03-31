@@ -1,6 +1,33 @@
-// Entry point for your Sass build
-html {
-  body {
-    background: gray;
-  }
+@use '@pepabo-inhouse/components-web' as inhouse;
+
+.button-submit {
+  @include inhouse.button-style(
+    $options: (
+      appearance: flat,
+      color: neutral,
+      shape: circle,
+      size: m,
+      width: auto,
+    )
+  );
+}
+
+.button-favorite {
+  @include inhouse.button-style(
+    $options: (
+      appearance: flat,
+      color: favorite,
+      shape: circle,
+    )
+  );
+}
+
+.button-nav-next {
+  @include inhouse.button-style(
+    $options: (
+      appearance: transparent,
+      brightness: light,
+      color: interactive,
+    )
+  );
 }
