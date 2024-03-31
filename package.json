@@ -13,7 +13,7 @@
     "@pepabo-inhouse/constants": "^1.0.0",
     "@pepabo-inhouse/container": "^1.0.0",
     "@pepabo-inhouse/description-list": "^1.0.0",
-    "@pepabo-inhouse/flavor": "^1.0.0",
+    "@pepabo-inhouse/flavor": "npm:@pepabo-inhouse/flippers-flavor@0.2.0",
     "@pepabo-inhouse/grid": "^1.0.0",
     "@pepabo-inhouse/header": "^1.0.0",
     "@pepabo-inhouse/icon": "^1.0.0",
